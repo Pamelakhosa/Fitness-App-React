@@ -1,0 +1,360 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: black; /* Chose black background */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* Video section on hme page */
+
+.video-slider-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 10px;
+  /* scrollbar-width: none; Hides scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hides scrollbar for IE/Edge */
+}
+
+/* .video-slider-container::-webkit-scrollbar {
+  display: none; 
+} */
+
+.video-slider {
+  display: flex;
+  gap: 50px;
+  border-radius: 5px;
+}
+
+.video-block {
+  flex: 0 0 auto;
+  width: 350px;
+}
+
+/* Register page */
+
+/* Background styling */
+.register-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://media.istockphoto.com/id/670051268/photo/people-at-the-gym-talking-to-the-receptionist.jpg?s=612x612&w=0&k=20&c=aD_wBFo5gWOdUhjvZo4mLXFde3__6e8S0lkMqdTKFOg=");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Blurry background effect */
+.register-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  background-size: contain;
+  backdrop-filter: blur(2px);
+}
+
+/* Register form container */
+.register-container {
+  position: relative;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  color: white;
+}
+
+/* Form styling */
+.register-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Button styling */
+.register-container .btn-primary {
+  background-color: #007bff;
+  border: none;
+  font-size: 16px;
+}
+
+.register-container .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.register-container .btn-secondary {
+  background-color: #6c757d;
+  border: none;
+  font-size: 16px;
+}
+
+.register-container .btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+
+/* Sign in page */
+
+/* Background styling */
+.login-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://media.istockphoto.com/id/1094355244/photo/happy-male-athlete-listening-music-on-treadmill-in-a-gym.jpg?s=612x612&w=0&k=20&c=ryhVuZ76iiRLO0mAFALLSwu9R8ezjSz_D9TQvuhZuh4=");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Blurry background effect */
+.login-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+}
+
+/* Login form container */
+.login-container {
+  position: relative;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  color: white;
+}
+
+/* Form styling */
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Button styling */
+.login-container .btn-primary {
+  background-color: #007bff;
+  border: none;
+  font-size: 16px;
+}
+
+.login-container .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.login-container .btn-secondary {
+  background-color: #6c757d;
+  border: none;
+  font-size: 16px;
+}
+
+.login-container .btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+
+/* User profile */
+
+.profile-page {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Background Image */
+.profile-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://media.istockphoto.com/id/1372029253/photo/happy-asian-athletic-woman-using-smart-phone-while-exercising-on-treadmill-in-a-gym.jpg?s=612x612&w=0&k=20&c=peduRSOQcwkYPxa25WQBuOMb4I-Fdeio4-IPEkj2rkc=');
+  filter: blur(2px);
+  z-index: -1;
+}
+
+/* Profile Card */
+.profile-container {
+  width: 70%;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Image */
+.profile-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+/* Logout Button */
+.logout-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+/* Back Button */
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+
+/* Calendar */
+
+/* Background covering entire screen */
+.planner-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;  /* Horizontally center the planner container */
+  align-items: center;  /* Vertically center the planner container */
+  z-index: -1; /* Keep the background behind the content */
+}
+
+.planner-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://media.istockphoto.com/id/937415802/photo/time-for-exercising-clock-calendar-and-dumbbell-with-blue-yoga-mat-background.jpg?s=612x612&w=0&k=20&c=nY2FYJ8Q63vENr5zYbTyCpo_PICEMLk9eiBbJ-Qp9-E=');
+  background-size: cover;
+  filter: blur(8px); /* Apply blur to the background image */
+  z-index: -1; /* Ensure the background stays behind */
+}
+
+/* Main container styling */
+.planner-container {
+  position: relative;
+  background: rgba(248, 242, 242, 0.2); /* Slight transparency */
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px); /* Blurred glass effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  height: 90%;
+  max-width: 1500px;
+  max-height: 1500px;
+}
+
+/* Calendar transparency */
+/* Container holding the calendar */
+.calendar-wrapper {
+  display: flex; /* Ensure the contents are arranged properly */
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  height: 90vh; /* Set height of the calendar wrapper to 90% of viewport height */
+  max-width: 100vw; /* Ensure it can take the full width of the viewport */
+  margin: 0 auto;
+  overflow: hidden; /* Prevent overflow of content */
+}
+
+/* React Calendar styles */
+.react-calendar {
+  background: rgba(252, 250, 250, 0.9) !important; /* Light transparency */
+  border-radius: 10px;
+  padding: 10px;
+  width: 100% !important; /* Make the calendar fill the available width */
+  height: 100%; /* Ensure it takes up all available height */
+  max-width: 100% !important; /* Remove any max-width limit */
+  max-height: 80% !important; /* Remove any max-height limit */
+}
+
+
+
+/* Back button styling */
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.back-button:hover {
+  background: rgba(224, 224, 224, 0.9);
+}
+
+.calendar-event {
+  background-color: rgb(0, 0, 240);
+  color: white;  /* Ensure text is readable */
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Pie chart */
+
+.pie-chart {
+  max-height: 300px;  /* Limit the height to 300px (you can adjust this as needed) */
+  margin: 0 auto;     /* Center the chart */
+  display: block;
+}
+
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
